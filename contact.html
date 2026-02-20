@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – Adplix | Book a Free Marketing Strategy Session</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Get in touch with Adplix. Book your free marketing strategy session and discover how we can scale your brand to new heights." />
+  <meta name="keywords" content="contact Adplix, book a strategy call, marketing consultation, free strategy session, digital marketing agency contact" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://adplix.com/contact.html" />
+  <meta property="og:title" content="Contact Adplix – Book Your Free Strategy Session" />
+  <meta property="og:description" content="Ready to scale? Book your free discovery call with Adplix today." />
+  <meta property="og:url" content="https://adplix.com/contact.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .page-hero {
+      position: relative; padding: 9rem 8% 5rem;
+      overflow: hidden; border-bottom: 1px solid var(--glass-border);
+    }
+    .page-hero-bg {
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 55% 55% at 75% 45%, rgba(0,212,255,.1) 0%, transparent 60%),
+                  radial-gradient(ellipse 35% 45% at 20% 65%, rgba(123,47,255,.07) 0%, transparent 60%);
+    }
+    .page-hero-grid {
+      position: absolute; inset: 0;
+      background-image: linear-gradient(rgba(0,212,255,.03) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(0,212,255,.03) 1px, transparent 1px);
+      background-size: 50px 50px;
+    }
+    .page-hero-content { position: relative; z-index: 1; max-width: 650px; }
+    .page-hero-title {
+      font-family: var(--font-head); font-size: clamp(2.2rem, 5vw, 4rem);
+      font-weight: 900; color: var(--white); line-height: 1.1;
+    }
+    .page-hero-title span { color: var(--cyan); }
+    .page-hero-sub { margin-top: 1.2rem; font-size: 1.05rem; color: var(--grey); line-height: 1.75; max-width: 520px; }
+
+    /* ── Contact Layout ── */
+    .contact-layout {
+      display: grid; grid-template-columns: 1fr 1.4fr; gap: 4rem; align-items: start;
+    }
+
+    /* ── Info Panel ── */
+    .contact-info-panel { position: sticky; top: 110px; }
+    .info-card {
+      padding: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .info-card h3 {
+      font-family: var(--font-head); font-size: .85rem;
+      letter-spacing: 2px; text-transform: uppercase;
+      color: var(--cyan); margin-bottom: 1.5rem;
+    }
+    .info-item {
+      display: flex; gap: 1.2rem; margin-bottom: 1.4rem; align-items: flex-start;
+    }
+    .info-icon {
+      width: 44px; height: 44px; flex-shrink: 0;
+      background: rgba(0,212,255,.1);
+      border: 1px solid rgba(0,212,255,.2);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: .95rem; color: var(--cyan);
+    }
+    .info-text strong { display: block; font-size: .9rem; color: var(--white); margin-bottom: .15rem; }
+    .info-text span { font-size: .85rem; color: var(--grey); }
+
+    /* ── Why Us panel ── */
+    .why-list { margin-top: 1rem; }
+    .why-item {
+      display: flex; align-items: center; gap: .8rem;
+      padding: .6rem 0; border-bottom: 1px solid var(--glass-border);
+      font-size: .88rem; color: var(--grey);
+    }
+    .why-item:last-child { border: none; }
+    .why-item i { color: var(--cyan); font-size: .9rem; }
+
+    /* ── Form ── */
+    .contact-form-wrap { padding: 2.8rem; }
+    .contact-form-wrap h3 {
+      font-family: var(--font-head); font-size: 1.2rem; font-weight: 700;
+      color: var(--white); margin-bottom: .5rem; letter-spacing: 1px;
+    }
+    .contact-form-wrap p { font-size: .88rem; color: var(--grey); margin-bottom: 2rem; }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+    .form-group { margin-bottom: 1.4rem; }
+    .form-group label {
+      display: block; font-size: .78rem; font-weight: 600;
+      letter-spacing: 1.5px; text-transform: uppercase;
+      color: var(--grey); margin-bottom: .6rem;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      background: rgba(5,13,31,.7);
+      border: 1px solid var(--glass-border);
+      border-radius: 10px; padding: .9rem 1.2rem;
+      color: var(--white); font-family: var(--font-body);
+      font-size: .92rem;
+      transition: border-color 0.3s, box-shadow 0.3s;
+      outline: none;
+      appearance: none;
+    }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: rgba(138,154,181,.4); }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--cyan);
+      box-shadow: 0 0 0 3px rgba(0,212,255,.12);
+    }
+    .form-group select option { background: var(--navy-mid); color: var(--white); }
+    .form-group textarea { min-height: 130px; resize: vertical; }
+
+    /* Budget radio */
+    .budget-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: .8rem; }
+    .budget-option input { display: none; }
+    .budget-label {
+      display: block; text-align: center;
+      padding: .6rem .8rem;
+      background: rgba(5,13,31,.5);
+      border: 1px solid var(--glass-border);
+      border-radius: 8px; font-size: .8rem; color: var(--grey);
+      cursor: none; transition: var(--transition);
+    }
+    .budget-option input:checked + .budget-label {
+      border-color: var(--cyan); color: var(--cyan);
+      background: rgba(0,212,255,.08);
+    }
+    .budget-label:hover { border-color: rgba(0,212,255,.4); color: var(--white); }
+
+    /* Submit */
+    .btn-submit {
+      width: 100%; justify-content: center;
+      font-size: .85rem; padding: 1rem 2rem;
+      margin-top: .5rem;
+    }
+    .form-note {
+      text-align: center; margin-top: 1rem;
+      font-size: .78rem; color: var(--grey);
+    }
+    .form-note i { color: var(--cyan); }
+
+    /* ── Success message ── */
+    .form-success {
+      display: none; text-align: center; padding: 3rem 2rem;
+    }
+    .form-success.show { display: block; }
+    .success-icon {
+      width: 80px; height: 80px; border-radius: 50%;
+      background: rgba(0,212,255,.1); border: 2px solid var(--cyan);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2rem; color: var(--cyan);
+      margin: 0 auto 1.5rem;
+      animation: successPop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    @keyframes successPop { from { transform: scale(0); } to { transform: scale(1); } }
+    .form-success h3 { font-family: var(--font-head); color: var(--white); margin-bottom: .5rem; }
+    .form-success p { color: var(--grey); font-size: .92rem; }
+
+    /* ── Map / Office Visual ── */
+    .office-section { background: var(--navy-mid); border-top: 1px solid var(--glass-border); }
+    .office-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 2.5rem; }
+    .office-card { padding: 2rem; text-align: center; transition: all 0.3s; }
+    .office-card:hover { transform: translateY(-5px); }
+    .office-card .office-flag { font-size: 2.5rem; margin-bottom: 1rem; }
+    .office-card h3 { font-family: var(--font-head); font-size: .9rem; color: var(--white); margin-bottom: .4rem; }
+    .office-card p { font-size: .85rem; color: var(--grey); line-height: 1.6; }
+
+    /* ── FAQ ── */
+    .faq-list { margin-top: 2.5rem; }
+    .faq-item {
+      border-bottom: 1px solid var(--glass-border);
+      overflow: hidden;
+    }
+    .faq-question {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.4rem 0; cursor: none;
+      font-weight: 600; color: var(--white);
+      transition: color 0.3s;
+    }
+    .faq-question:hover { color: var(--cyan); }
+    .faq-question i { color: var(--cyan); transition: transform 0.3s; font-size: .85rem; }
+    .faq-item.open .faq-question i { transform: rotate(180deg); }
+    .faq-answer {
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s;
+      font-size: .9rem; color: var(--grey); line-height: 1.75;
+    }
+    .faq-item.open .faq-answer { max-height: 200px; padding-bottom: 1.4rem; }
+
+    @media (max-width: 1000px) {
+      .contact-layout { grid-template-columns: 1fr; }
+      .contact-info-panel { position: static; }
+      .office-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .form-row { grid-template-columns: 1fr; }
+      .budget-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<div id="cursor-outer"></div>
+<div id="cursor-inner"></div>
+<canvas id="particles-canvas"></canvas>
+<div id="page-transition" class="slide-in"></div>
+
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo">AD<span>PLIX</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="btn btn-primary" style="font-size:.72rem;padding:.65rem 1.5rem;">Get Started</a>
+  <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-nav" role="dialog" aria-modal="true">
+  <a href="index.html">Home</a><a href="services.html">Services</a>
+  <a href="about.html">About</a><a href="portfolio.html">Portfolio</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<!-- Page Hero -->
+<header class="page-hero" role="banner">
+  <div class="page-hero-bg" aria-hidden="true"></div>
+  <div class="page-hero-grid" aria-hidden="true"></div>
+  <div class="page-hero-content">
+    <div class="section-label">Let's Talk</div>
+    <h1 class="page-hero-title reveal">Your Growth<br/>Journey <span>Starts Here</span></h1>
+    <p class="page-hero-sub reveal" data-delay="100">
+      Tell us about your brand, your goals, and your challenges. Within 24 hours, you'll hear from a senior Adplix strategist with a clear path forward.
+    </p>
+  </div>
+</header>
+
+<!-- ── Contact Section ── -->
+<section class="section" aria-labelledby="contact-form-heading">
+  <div class="contact-layout">
+
+    <!-- Left: Info -->
+    <div class="contact-info-panel">
+      <div class="glass info-card reveal-left">
+        <h3>Get in Touch</h3>
+        <div class="info-item">
+          <div class="info-icon"><i class="fas fa-envelope"></i></div>
+          <div class="info-text">
+            <strong>Email Us</strong>
+            <span>hello@adplix.com</span>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon"><i class="fas fa-phone"></i></div>
+          <div class="info-text">
+            <strong>Call Us</strong>
+            <span>+1 (555) 123-4567</span>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon"><i class="fas fa-clock"></i></div>
+          <div class="info-text">
+            <strong>Response Time</strong>
+            <span>Within 24 hours guaranteed</span>
+          </div>
+        </div>
+        <div class="info-item" style="margin-bottom:0;">
+          <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div class="info-text">
+            <strong>Headquarters</strong>
+            <span>New York, NY · Remote Worldwide</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass info-card reveal-left" data-delay="120">
+        <h3>Why Book a Call?</h3>
+        <div class="why-list">
+          <div class="why-item"><i class="fas fa-check-circle"></i> Free 45-minute strategy session</div>
+          <div class="why-item"><i class="fas fa-check-circle"></i> Custom growth roadmap — no fluff</div>
+          <div class="why-item"><i class="fas fa-check-circle"></i> Competitive audit included</div>
+          <div class="why-item"><i class="fas fa-check-circle"></i> No sales pressure, pure value</div>
+          <div class="why-item"><i class="fas fa-check-circle"></i> Senior strategist on every call</div>
+        </div>
+      </div>
+
+      <div class="social-icons reveal-left" data-delay="200" style="gap:1rem;margin-top:1rem;">
+        <a href="#" aria-label="Twitter" style="width:44px;height:44px;"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn" style="width:44px;height:44px;"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Instagram" style="width:44px;height:44px;"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="TikTok" style="width:44px;height:44px;"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+
+    <!-- Right: Form -->
+    <div class="glass contact-form-wrap reveal-right">
+      <h3 id="contact-form-heading">Book Your Free Strategy Session</h3>
+      <p>Fill in the details below and we'll get back to you within 24 hours with a personalized plan.</p>
+
+      <form id="contact-form" novalidate aria-label="Contact form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First Name *</label>
+            <input type="text" id="fname" name="fname" placeholder="Alex" required autocomplete="given-name" />
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name *</label>
+            <input type="text" id="lname" name="lname" placeholder="Johnson" required autocomplete="family-name" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" placeholder="alex@company.com" required autocomplete="email" />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" autocomplete="tel" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="company">Company / Brand Name *</label>
+          <input type="text" id="company" name="company" placeholder="Your company name" required autocomplete="organization" />
+        </div>
+
+        <div class="form-group">
+          <label for="service">Service You're Interested In *</label>
+          <select id="service" name="service" required>
+            <option value="" disabled selected>Select a service</option>
+            <option value="growth">Growth Marketing</option>
+            <option value="paid">Paid Advertising</option>
+            <option value="seo">SEO & Content</option>
+            <option value="brand">Brand Identity</option>
+            <option value="social">Social Media</option>
+            <option value="email">Email & Automation</option>
+            <option value="full">Full-Service Package</option>
+            <option value="other">Not Sure Yet</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Monthly Marketing Budget</label>
+          <div class="budget-grid" role="group" aria-label="Select your budget range">
+            <div class="budget-option">
+              <input type="radio" name="budget" id="b1" value="under-2k" />
+              <label class="budget-label" for="b1">Under $2K</label>
+            </div>
+            <div class="budget-option">
+              <input type="radio" name="budget" id="b2" value="2k-5k" />
+              <label class="budget-label" for="b2">$2K – $5K</label>
+            </div>
+            <div class="budget-option">
+              <input type="radio" name="budget" id="b3" value="5k-10k" />
+              <label class="budget-label" for="b3">$5K – $10K</label>
+            </div>
+            <div class="budget-option">
+              <input type="radio" name="budget" id="b4" value="10k-25k" />
+              <label class="budget-label" for="b4">$10K – $25K</label>
+            </div>
+            <div class="budget-option">
+              <input type="radio" name="budget" id="b5" value="25k-plus" />
+              <label class="budget-label" for="b5">$25K+</label>
+            </div>
+            <div class="budget-option">
+              <input type="radio" name="budget" id="b6" value="unsure" />
+              <label class="budget-label" for="b6">Not Sure</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="goals">Your Goals & Challenges *</label>
+          <textarea id="goals" name="goals" placeholder="Tell us about your brand, current marketing efforts, and the biggest challenge you're trying to solve..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-submit">
+          <i class="fas fa-rocket"></i> Book My Free Strategy Session
+        </button>
+        <p class="form-note"><i class="fas fa-lock"></i> Your data is 100% private. We never share your information.</p>
+      </form>
+
+      <div class="form-success" id="form-success" aria-live="polite">
+        <div class="success-icon"><i class="fas fa-check"></i></div>
+        <h3>You're All Set!</h3>
+        <p>Thanks for reaching out. A senior Adplix strategist will contact you within 24 hours to schedule your free strategy session.</p>
+        <a href="index.html" class="btn btn-outline mt-2"><i class="fas fa-home"></i> Back to Home</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── Office Locations ── -->
+<section class="section office-section" aria-labelledby="offices-heading">
+  <div class="section-label">Where We Are</div>
+  <h2 class="section-title reveal" id="offices-heading">Global <span>Presence</span></h2>
+  <div class="office-grid">
+    <div class="glass office-card tilt reveal" data-delay="0">
+      <div class="office-flag" aria-hidden="true">🇺🇸</div>
+      <h3>New York</h3>
+      <p>123 Madison Avenue<br/>New York, NY 10016<br/>United States</p>
+    </div>
+    <div class="glass office-card tilt reveal" data-delay="100">
+      <div class="office-flag" aria-hidden="true">🇬🇧</div>
+      <h3>London</h3>
+      <p>45 Canary Wharf<br/>London, E14 5AB<br/>United Kingdom</p>
+    </div>
+    <div class="glass office-card tilt reveal" data-delay="200">
+      <div class="office-flag" aria-hidden="true">🌐</div>
+      <h3>Remote Worldwide</h3>
+      <p>Our team operates globally<br/>across 12+ time zones<br/>to serve you anywhere.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section class="section" aria-labelledby="faq-heading">
+  <div class="section-label">Common Questions</div>
+  <h2 class="section-title reveal" id="faq-heading">Have <span>Questions?</span></h2>
+
+  <div class="faq-list mt-2 reveal" data-delay="100">
+    <div class="faq-item">
+      <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+        How quickly can we get started? <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="faq-answer">After our initial strategy call, most clients are onboarded and campaigns are live within 7–14 business days. We move fast because every day without great marketing is opportunity lost.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+        Do you require long-term contracts? <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="faq-answer">We start with a 3-month minimum engagement to allow enough time to build and optimize campaigns, but after that we work month-to-month. We believe in earning your business every month.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+        What makes Adplix different from other agencies? <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="faq-answer">Three things: radical transparency (you see everything we do and why), senior talent on every account (no juniors managing your budget), and a results-first model where we're genuinely invested in your growth metrics — not just deliverables.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+        How do you measure and report results? <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="faq-answer">You get a real-time performance dashboard, weekly progress updates, and a comprehensive monthly strategy review. We track revenue-first metrics — ROAS, CAC, LTV, and pipeline growth — not vanity metrics like impressions.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+        What industries do you specialize in? <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="faq-answer">We have deep experience in SaaS, e-commerce, fintech, health & wellness, real estate, and professional services. But our frameworks are adaptable — we've successfully served clients across 12+ industries.</div>
+    </div>
+  </div>
+</section>
+
+<footer role="contentinfo">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand-name">AD<span>PLIX</span></div>
+      <p class="footer-desc">Next-generation marketing for brands that lead.</p>
+      <div class="social-icons mt-2">
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Services</div>
+      <a href="services.html">Growth Marketing</a>
+      <a href="services.html">Paid Advertising</a>
+      <a href="services.html">SEO & Content</a>
+      <a href="services.html">Brand Identity</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Company</div>
+      <a href="about.html">About Us</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+      <a href="#">Blog</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Contact</div>
+      <a href="mailto:hello@adplix.com"><i class="fas fa-envelope"></i> hello@adplix.com</a>
+      <a href="tel:+15551234567"><i class="fas fa-phone"></i> +1 (555) 123-4567</a>
+      <a href="#"><i class="fas fa-map-marker-alt"></i> New York, NY</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Adplix Marketing. All rights reserved.</span>
+    <span><a href="#" style="color:var(--grey)">Privacy Policy</a> &nbsp;·&nbsp; <a href="#" style="color:var(--grey)">Terms of Service</a></span>
+  </div>
+</footer>
+
+<script src="main.js" defer></script>
+<script>
+  // Form submission
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    // Validate required fields
+    const required = this.querySelectorAll('[required]');
+    let valid = true;
+    required.forEach(el => {
+      el.style.borderColor = '';
+      if (!el.value.trim()) { el.style.borderColor = '#ff4466'; valid = false; }
+    });
+    if (!valid) return;
+
+    // Show success
+    this.style.opacity = '0';
+    this.style.transition = 'opacity 0.4s';
+    setTimeout(() => {
+      this.style.display = 'none';
+      const success = document.getElementById('form-success');
+      success.classList.add('show');
+    }, 400);
+  });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-question').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+      });
+      if (!wasOpen) {
+        item.classList.add('open');
+        q.setAttribute('aria-expanded', 'true');
+      }
+    });
+    q.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); q.click(); } });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adplix – Futuristic Marketing Agency | Growth, Branding & Digital Strategy</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Adplix is a next-generation marketing agency delivering data-driven growth, cutting-edge branding, and digital strategy for ambitious brands worldwide." />
+  <meta name="keywords" content="marketing agency, digital marketing, branding, SEO, social media marketing, paid ads, growth hacking, Adplix" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Adplix Marketing" />
+  <link rel="canonical" href="https://adplix.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://adplix.com/" />
+  <meta property="og:title"       content="Adplix – Next-Gen Marketing Agency" />
+  <meta property="og:description" content="We craft data-driven marketing strategies that launch brands to new heights." />
+  <meta property="og:image"       content="https://adplix.com/og-image.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:site"        content="@AdplixMarketing" />
+  <meta name="twitter:title"       content="Adplix – Next-Gen Marketing Agency" />
+  <meta name="twitter:description" content="Futuristic marketing for visionary brands." />
+  <meta name="twitter:image"       content="https://adplix.com/og-image.jpg" />
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MarketingAgency",
+    "name": "Adplix Marketing",
+    "url": "https://adplix.com",
+    "logo": "https://adplix.com/logo.png",
+    "description": "Next-generation marketing agency delivering data-driven growth and branding.",
+    "address": { "@type": "PostalAddress", "addressCountry": "US" },
+    "sameAs": [
+      "https://twitter.com/AdplixMarketing",
+      "https://linkedin.com/company/adplix",
+      "https://instagram.com/adplix"
+    ]
+  }
+  </script>
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="home.css" />
+
+  <style>
+    /* Page-specific additions */
+    .hero-cta-group { display:flex; gap:1.2rem; flex-wrap:wrap; margin-top:2.5rem; }
+    .hero-badge {
+      display:inline-flex; align-items:center; gap:.6rem;
+      background:var(--glass-bg); border:1px solid var(--glass-border);
+      backdrop-filter:blur(12px); border-radius:50px;
+      padding:.45rem 1.2rem; font-size:.78rem; color:var(--cyan);
+      letter-spacing:1.5px; margin-bottom:1.4rem;
+    }
+    .hero-badge .dot { width:7px;height:7px;border-radius:50%;background:var(--cyan);animation:pulse 1.4s infinite; }
+    @keyframes pulse { 0%,100%{box-shadow:0 0 0 0 rgba(0,212,255,.5)} 50%{box-shadow:0 0 0 8px rgba(0,212,255,0)} }
+  </style>
+</head>
+<body>
+
+<!-- Cursor -->
+<div id="cursor-outer"></div>
+<div id="cursor-inner"></div>
+
+<!-- Particles -->
+<canvas id="particles-canvas"></canvas>
+
+<!-- Page Transition -->
+<div id="page-transition" class="slide-in"></div>
+
+<!-- ── Navigation ── -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo">AD<span>PLIX</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="btn btn-primary" style="font-size:.72rem;padding:.65rem 1.5rem;">Get Started</a>
+  <button class="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" role="dialog" aria-modal="true">
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="about.html">About</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<!-- ══════════════════════════════════════
+     HERO
+══════════════════════════════════════ -->
+<header class="hero" role="banner">
+  <div class="hero-grid-lines" aria-hidden="true"></div>
+  <div class="hero-orb hero-orb-1" data-parallax="18" aria-hidden="true"></div>
+  <div class="hero-orb hero-orb-2" data-parallax="10" aria-hidden="true"></div>
+
+  <div class="hero-content">
+    <div class="hero-badge"><span class="dot"></span> Next-Gen Digital Marketing</div>
+    <h1 class="hero-title reveal">
+      We Don't Just<br/>
+      Market — We<br/>
+      <span>Launch Futures.</span>
+    </h1>
+    <p class="hero-sub reveal" data-delay="150">
+      Adplix is the marketing agency built for tomorrow. Data-obsessed, creativity-driven,
+      and strategically relentless — we scale brands that dare to lead.
+    </p>
+    <div class="hero-cta-group reveal" data-delay="280">
+      <a href="services.html" class="btn btn-primary"><i class="fas fa-rocket"></i> Explore Services</a>
+      <a href="portfolio.html" class="btn btn-outline">View Our Work</a>
+    </div>
+  </div>
+
+  <div class="hero-visual" aria-hidden="true">
+    <div class="hex-grid" data-parallax="6">
+      <div class="hex"></div><div class="hex"></div><div class="hex"></div>
+      <div class="hex"></div><div class="hex active"></div><div class="hex"></div>
+      <div class="hex"></div><div class="hex"></div><div class="hex"></div>
+    </div>
+  </div>
+
+  <div class="hero-scroll-hint" aria-label="Scroll down">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</header>
+
+<!-- ── Ticker ── -->
+<div class="marquee-wrap" aria-hidden="true">
+  <div class="marquee-track">
+    <div class="marquee-item"><span>✦</span> SEO & Content</div>
+    <div class="marquee-item"><span>✦</span> Paid Media</div>
+    <div class="marquee-item"><span>✦</span> Brand Strategy</div>
+    <div class="marquee-item"><span>✦</span> Social Media</div>
+    <div class="marquee-item"><span>✦</span> Web Design</div>
+    <div class="marquee-item"><span>✦</span> Data Analytics</div>
+    <div class="marquee-item"><span>✦</span> Email Marketing</div>
+    <div class="marquee-item"><span>✦</span> Growth Hacking</div>
+    <!-- duplicate for seamless loop -->
+    <div class="marquee-item"><span>✦</span> SEO & Content</div>
+    <div class="marquee-item"><span>✦</span> Paid Media</div>
+    <div class="marquee-item"><span>✦</span> Brand Strategy</div>
+    <div class="marquee-item"><span>✦</span> Social Media</div>
+    <div class="marquee-item"><span>✦</span> Web Design</div>
+    <div class="marquee-item"><span>✦</span> Data Analytics</div>
+    <div class="marquee-item"><span>✦</span> Email Marketing</div>
+    <div class="marquee-item"><span>✦</span> Growth Hacking</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     STATS
+══════════════════════════════════════ -->
+<section class="section stats-section" aria-label="Key statistics">
+  <div class="stats-grid" data-stagger>
+    <div class="glass stat-card">
+      <div class="stat-value" data-count="340" data-suffix="+">0</div>
+      <div class="stat-label">Campaigns Launched</div>
+    </div>
+    <div class="glass stat-card">
+      <div class="stat-value" data-count="9.8" data-suffix="x">0</div>
+      <div class="stat-label">Average ROAS</div>
+    </div>
+    <div class="glass stat-card">
+      <div class="stat-value" data-count="120" data-suffix="+">0</div>
+      <div class="stat-label">Brand Partnerships</div>
+    </div>
+    <div class="glass stat-card">
+      <div class="stat-value" data-count="98" data-suffix="%">0</div>
+      <div class="stat-label">Client Satisfaction</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     SERVICES PREVIEW
+══════════════════════════════════════ -->
+<section class="section" aria-labelledby="services-heading">
+  <div class="section-label">What We Do</div>
+  <h2 class="section-title reveal" id="services-heading">
+    Full-Spectrum<br/><span>Marketing Power</span>
+  </h2>
+  <p class="section-sub reveal" data-delay="100">
+    Every brand needs a different weapon. We deploy a full arsenal of digital services tailored to your goals.
+  </p>
+
+  <div class="services-preview-grid mt-3" data-stagger>
+    <article class="glass service-card tilt card-hover">
+      <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+      <h3>Growth Marketing</h3>
+      <p>Systematic experiments, funnel optimization, and data-backed scaling to multiply your revenue.</p>
+      <a href="services.html" class="service-link">Learn more <i class="fas fa-arrow-right"></i></a>
+    </article>
+    <article class="glass service-card tilt card-hover">
+      <div class="service-icon"><i class="fas fa-bullseye"></i></div>
+      <h3>Paid Advertising</h3>
+      <p>High-converting Google, Meta & TikTok campaigns engineered for maximum return on ad spend.</p>
+      <a href="services.html" class="service-link">Learn more <i class="fas fa-arrow-right"></i></a>
+    </article>
+    <article class="glass service-card tilt card-hover">
+      <div class="service-icon"><i class="fas fa-search"></i></div>
+      <h3>SEO & Content</h3>
+      <p>Dominate search rankings with technical SEO, authority building, and magnetic content strategy.</p>
+      <a href="services.html" class="service-link">Learn more <i class="fas fa-arrow-right"></i></a>
+    </article>
+    <article class="glass service-card tilt card-hover">
+      <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
+      <h3>Brand Identity</h3>
+      <p>Visual storytelling that makes your brand impossible to ignore across every touchpoint.</p>
+      <a href="services.html" class="service-link">Learn more <i class="fas fa-arrow-right"></i></a>
+    </article>
+    <article class="glass service-card tilt card-hover">
+      <div class="service-icon"><i class="fas fa-share-alt"></i></div>
+      <h3>Social Media</h3>
+      <p>Community-building, viral content, and influencer strategies that keep your brand in the conversation.</p>
+      <a href="services.html" class="service-link">Learn more <i class="fas fa-arrow-right"></i></a>
+    </article>
+    <article class="glass service-card tilt card-hover">
+      <div class="service-icon"><i class="fas fa-envelope-open-text"></i></div>
+      <h3>Email & Automation</h3>
+      <p>Lifecycle campaigns and smart automation flows that nurture leads into loyal customers 24/7.</p>
+      <a href="services.html" class="service-link">Learn more <i class="fas fa-arrow-right"></i></a>
+    </article>
+  </div>
+
+  <div class="text-center mt-3">
+    <a href="services.html" class="btn btn-outline">See All Services <i class="fas fa-arrow-right"></i></a>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     PROCESS
+══════════════════════════════════════ -->
+<section class="section process-section" aria-labelledby="process-heading">
+  <div class="section-label">How We Work</div>
+  <h2 class="section-title reveal" id="process-heading">Our <span>4-Step</span> Blueprint</h2>
+
+  <div class="process-steps mt-3">
+    <div class="process-step reveal" data-delay="0">
+      <div class="step-num">01</div>
+      <div class="step-body">
+        <h3>Discover</h3>
+        <p>Deep-dive into your brand, market landscape, and audience to uncover untapped opportunities.</p>
+      </div>
+    </div>
+    <div class="process-connector" aria-hidden="true"></div>
+    <div class="process-step reveal" data-delay="120">
+      <div class="step-num">02</div>
+      <div class="step-body">
+        <h3>Strategize</h3>
+        <p>Build a custom, data-informed roadmap aligned with your goals, budget, and timeline.</p>
+      </div>
+    </div>
+    <div class="process-connector" aria-hidden="true"></div>
+    <div class="process-step reveal" data-delay="240">
+      <div class="step-num">03</div>
+      <div class="step-body">
+        <h3>Execute</h3>
+        <p>Launch precision campaigns with creative excellence and technical rigor across all channels.</p>
+      </div>
+    </div>
+    <div class="process-connector" aria-hidden="true"></div>
+    <div class="process-step reveal" data-delay="360">
+      <div class="step-num">04</div>
+      <div class="step-body">
+        <h3>Scale</h3>
+        <p>Iterate, optimize, and double down on what works — continuously compounding your growth.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     TESTIMONIAL
+══════════════════════════════════════ -->
+<section class="section" aria-labelledby="testimonials-heading">
+  <div class="section-label">Client Voices</div>
+  <h2 class="section-title reveal" id="testimonials-heading">Results That<br/><span>Speak Loudest</span></h2>
+
+  <div class="testimonial-grid mt-3" data-stagger>
+    <blockquote class="glass testimonial-card tilt">
+      <div class="stars" aria-label="5 stars">★★★★★</div>
+      <p>"Adplix tripled our qualified leads in 90 days. Their paid media team doesn't just run ads — they engineer growth engines."</p>
+      <footer>
+        <div class="avatar">JM</div>
+        <div>
+          <strong>Jordan Mitchell</strong>
+          <span>CEO, NexaFlow SaaS</span>
+        </div>
+      </footer>
+    </blockquote>
+    <blockquote class="glass testimonial-card tilt">
+      <div class="stars" aria-label="5 stars">★★★★★</div>
+      <p>"Our SEO traffic went from 12k to 180k monthly visitors in under a year. Adplix's content strategy is unmatched."</p>
+      <footer>
+        <div class="avatar">SR</div>
+        <div>
+          <strong>Sara Reyes</strong>
+          <span>Marketing Director, LuminaTech</span>
+        </div>
+      </footer>
+    </blockquote>
+    <blockquote class="glass testimonial-card tilt">
+      <div class="stars" aria-label="5 stars">★★★★★</div>
+      <p>"The rebrand Adplix delivered was transformative. We went from startup to premium in 60 days flat. Worth every penny."</p>
+      <footer>
+        <div class="avatar">AK</div>
+        <div>
+          <strong>Alex Kim</strong>
+          <span>Founder, Verdant Ventures</span>
+        </div>
+      </footer>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     CTA BANNER
+══════════════════════════════════════ -->
+<section class="cta-banner section" aria-labelledby="cta-heading">
+  <div class="cta-glow" aria-hidden="true"></div>
+  <div class="cta-content">
+    <h2 class="cta-title reveal" id="cta-heading">Ready to <span>Dominate</span><br/>Your Market?</h2>
+    <p class="reveal" data-delay="100" style="color:var(--grey);max-width:500px;margin:.8rem auto 2rem;">
+      Join 120+ brands that chose Adplix to lead their growth. Let's build something extraordinary.
+    </p>
+    <div class="flex-center gap-1 reveal" data-delay="200">
+      <a href="contact.html" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Start Your Journey</a>
+      <a href="about.html" class="btn btn-outline">Learn About Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     FOOTER
+══════════════════════════════════════ -->
+<footer role="contentinfo">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand-name">AD<span>PLIX</span></div>
+      <p class="footer-desc">Next-generation marketing for brands that lead. Data-driven strategy, creative excellence, measurable results.</p>
+      <div class="social-icons mt-2">
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Services</div>
+      <a href="services.html">Growth Marketing</a>
+      <a href="services.html">Paid Advertising</a>
+      <a href="services.html">SEO & Content</a>
+      <a href="services.html">Brand Identity</a>
+      <a href="services.html">Social Media</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Company</div>
+      <a href="about.html">About Us</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+      <a href="#">Blog</a>
+      <a href="#">Careers</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Contact</div>
+      <a href="mailto:hello@adplix.com"><i class="fas fa-envelope"></i> hello@adplix.com</a>
+      <a href="tel:+15551234567"><i class="fas fa-phone"></i> +1 (555) 123-4567</a>
+      <a href="#"><i class="fas fa-map-marker-alt"></i> New York, NY</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Adplix Marketing. All rights reserved.</span>
+    <span><a href="#" style="color:var(--grey)">Privacy Policy</a> &nbsp;·&nbsp; <a href="#" style="color:var(--grey)">Terms of Service</a></span>
+  </div>
+</footer>
+
+<script src="main.js" defer></script>
+</body>
+</html>

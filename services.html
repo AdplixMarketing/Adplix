@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services – Adplix | Growth Marketing, SEO, Paid Ads & Branding</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Explore Adplix's full suite of marketing services: growth marketing, paid advertising, SEO & content, brand identity, social media, and email automation." />
+  <meta name="keywords" content="marketing services, growth marketing, paid advertising, SEO, branding, social media management, email automation, Adplix" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://adplix.com/services.html" />
+  <meta property="og:title" content="Services – Adplix Marketing Agency" />
+  <meta property="og:description" content="Full-spectrum digital marketing services that scale your brand." />
+  <meta property="og:url" content="https://adplix.com/services.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* ── Page Hero ── */
+    .page-hero {
+      position: relative;
+      padding: 9rem 8% 5rem;
+      overflow: hidden;
+      border-bottom: 1px solid var(--glass-border);
+    }
+    .page-hero-bg {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 60% 60% at 80% 50%, rgba(0,212,255,.1) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 50% at 10% 70%, rgba(123,47,255,.08) 0%, transparent 60%);
+    }
+    .page-hero-grid {
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(0,212,255,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,212,255,.03) 1px, transparent 1px);
+      background-size: 50px 50px;
+    }
+    .page-hero-content { position: relative; z-index: 1; max-width: 700px; }
+    .page-hero-title {
+      font-family: var(--font-head);
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      font-weight: 900; color: var(--white);
+      line-height: 1.1;
+    }
+    .page-hero-title span { color: var(--cyan); }
+    .page-hero-sub { margin-top: 1.2rem; font-size: 1.05rem; color: var(--grey); line-height: 1.75; max-width: 540px; }
+
+    /* ── Service Detail Cards ── */
+    .services-full-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+    .svc-card {
+      padding: 2.8rem;
+      transition: all 0.35s ease;
+      position: relative; overflow: hidden;
+    }
+    .svc-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0;
+      width: 4px; height: 100%;
+      background: linear-gradient(to bottom, var(--cyan), transparent);
+      opacity: 0; transition: opacity 0.3s;
+    }
+    .svc-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 60px rgba(0,0,0,.45);
+    }
+    .svc-card:hover::before { opacity: 1; }
+
+    .svc-header { display: flex; align-items: flex-start; gap: 1.4rem; margin-bottom: 1.5rem; }
+    .svc-icon-lg {
+      width: 68px; height: 68px; flex-shrink: 0;
+      background: rgba(0,212,255,.1);
+      border: 1px solid rgba(0,212,255,.25);
+      border-radius: 18px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem; color: var(--cyan);
+      transition: all 0.3s;
+    }
+    .svc-card:hover .svc-icon-lg { background: rgba(0,212,255,.2); box-shadow: var(--glow-sm); }
+    .svc-header-text h3 {
+      font-family: var(--font-head);
+      font-size: 1.1rem; font-weight: 700;
+      letter-spacing: 1px; color: var(--white);
+      margin-bottom: .4rem;
+    }
+    .svc-header-text .svc-tag {
+      font-size: .72rem; letter-spacing: 2px; text-transform: uppercase;
+      color: var(--cyan); opacity: 0.75;
+    }
+    .svc-desc { font-size: .93rem; color: var(--grey); line-height: 1.75; margin-bottom: 1.5rem; }
+    .svc-features { list-style: none; }
+    .svc-features li {
+      display: flex; align-items: center; gap: .7rem;
+      font-size: .87rem; color: var(--grey);
+      padding: .4rem 0;
+      border-bottom: 1px solid rgba(0,212,255,.06);
+    }
+    .svc-features li:last-child { border: none; }
+    .svc-features li::before {
+      content: ''; display: inline-block;
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--cyan); flex-shrink: 0;
+    }
+
+    /* ── Pricing Teaser ── */
+    .pricing-teaser {
+      background: var(--navy-mid);
+      border-top: 1px solid var(--glass-border);
+    }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    .price-card {
+      padding: 2.5rem 2rem; text-align: center;
+      position: relative; overflow: hidden;
+      transition: all 0.35s ease;
+    }
+    .price-card.featured {
+      border-color: var(--cyan);
+      background: rgba(0,212,255,.05);
+    }
+    .price-card.featured::before {
+      content: 'Most Popular';
+      position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+      background: var(--cyan); color: var(--navy);
+      font-family: var(--font-head); font-size: .65rem;
+      font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+      padding: .3rem 1.2rem; border-radius: 0 0 10px 10px;
+    }
+    .price-card:hover { transform: translateY(-8px); box-shadow: 0 24px 60px rgba(0,0,0,.45); }
+    .price-name {
+      font-family: var(--font-head);
+      font-size: .8rem; letter-spacing: 3px; text-transform: uppercase;
+      color: var(--cyan); margin-bottom: 1.2rem;
+    }
+    .price-amount {
+      font-family: var(--font-head);
+      font-size: 2.8rem; font-weight: 900; color: var(--white);
+      line-height: 1;
+    }
+    .price-amount span { font-size: 1.1rem; color: var(--grey); }
+    .price-desc { font-size: .85rem; color: var(--grey); margin: .8rem 0 1.5rem; }
+    .price-features { text-align: left; margin-bottom: 2rem; }
+    .price-features li {
+      display: flex; align-items: center; gap: .6rem;
+      font-size: .86rem; color: var(--grey); padding: .45rem 0;
+      border-bottom: 1px solid rgba(0,212,255,.06);
+    }
+    .price-features li:last-child { border: none; }
+    .price-features li i { color: var(--cyan); font-size: .75rem; }
+
+    /* ── Tech Stack ── */
+    .tech-grid {
+      display: flex; flex-wrap: wrap; gap: 1rem;
+      margin-top: 2rem;
+    }
+    .tech-badge {
+      display: flex; align-items: center; gap: .6rem;
+      padding: .55rem 1.2rem;
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 50px;
+      font-size: .82rem; color: var(--grey);
+      backdrop-filter: blur(8px);
+      transition: var(--transition);
+    }
+    .tech-badge:hover { border-color: var(--cyan); color: var(--white); }
+    .tech-badge i { color: var(--cyan); }
+
+    @media (max-width: 860px) {
+      .services-full-grid { grid-template-columns: 1fr; }
+      .pricing-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="cursor-outer"></div>
+<div id="cursor-inner"></div>
+<canvas id="particles-canvas"></canvas>
+<div id="page-transition" class="slide-in"></div>
+
+<!-- Nav -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo">AD<span>PLIX</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html" class="active">Services</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="btn btn-primary" style="font-size:.72rem;padding:.65rem 1.5rem;">Get Started</a>
+  <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-nav" role="dialog" aria-modal="true">
+  <a href="index.html">Home</a><a href="services.html">Services</a>
+  <a href="about.html">About</a><a href="portfolio.html">Portfolio</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<!-- Page Hero -->
+<header class="page-hero" role="banner">
+  <div class="page-hero-bg" aria-hidden="true"></div>
+  <div class="page-hero-grid" aria-hidden="true"></div>
+  <div class="page-hero-content">
+    <div class="section-label">What We Offer</div>
+    <h1 class="page-hero-title reveal">Full-Spectrum <span>Marketing</span><br/>Arsenal</h1>
+    <p class="page-hero-sub reveal" data-delay="100">
+      Every service we offer is purpose-built to drive measurable results — from first impression to loyal customer. Precision-engineered for ambitious brands.
+    </p>
+    <div class="mt-2 reveal" data-delay="200">
+      <a href="contact.html" class="btn btn-primary"><i class="fas fa-rocket"></i> Launch a Campaign</a>
+    </div>
+  </div>
+</header>
+
+<!-- Ticker -->
+<div class="marquee-wrap" aria-hidden="true">
+  <div class="marquee-track">
+    <div class="marquee-item"><span>✦</span> Growth Marketing</div>
+    <div class="marquee-item"><span>✦</span> Paid Media Management</div>
+    <div class="marquee-item"><span>✦</span> Technical SEO</div>
+    <div class="marquee-item"><span>✦</span> Content Strategy</div>
+    <div class="marquee-item"><span>✦</span> Brand Identity Design</div>
+    <div class="marquee-item"><span>✦</span> Email Automation</div>
+    <div class="marquee-item"><span>✦</span> Social Media Marketing</div>
+    <div class="marquee-item"><span>✦</span> Conversion Optimization</div>
+    <div class="marquee-item"><span>✦</span> Growth Marketing</div>
+    <div class="marquee-item"><span>✦</span> Paid Media Management</div>
+    <div class="marquee-item"><span>✦</span> Technical SEO</div>
+    <div class="marquee-item"><span>✦</span> Content Strategy</div>
+    <div class="marquee-item"><span>✦</span> Brand Identity Design</div>
+    <div class="marquee-item"><span>✦</span> Email Automation</div>
+    <div class="marquee-item"><span>✦</span> Social Media Marketing</div>
+    <div class="marquee-item"><span>✦</span> Conversion Optimization</div>
+  </div>
+</div>
+
+<!-- ── Services Detail ── -->
+<section class="section" aria-labelledby="services-detail-heading">
+  <div class="section-label">Our Services</div>
+  <h2 class="section-title reveal" id="services-detail-heading">Every Tool You<br/><span>Need to Win</span></h2>
+  <p class="section-sub reveal" data-delay="100">Six core disciplines. One integrated strategy. Unlimited growth potential.</p>
+
+  <div class="services-full-grid mt-3">
+
+    <article class="glass svc-card tilt reveal" data-delay="0">
+      <div class="svc-header">
+        <div class="svc-icon-lg"><i class="fas fa-chart-line"></i></div>
+        <div class="svc-header-text">
+          <h3>Growth Marketing</h3>
+          <span class="svc-tag">Acquisition · Retention · Revenue</span>
+        </div>
+      </div>
+      <p class="svc-desc">We design full-funnel growth experiments, optimize conversion rates, and build compounding systems that scale your revenue month over month.</p>
+      <ul class="svc-features">
+        <li>Funnel architecture & CRO</li>
+        <li>A/B testing & experimentation</li>
+        <li>Retention & loyalty programs</li>
+        <li>Revenue attribution modeling</li>
+        <li>Growth roadmap planning</li>
+      </ul>
+    </article>
+
+    <article class="glass svc-card tilt reveal" data-delay="80">
+      <div class="svc-header">
+        <div class="svc-icon-lg"><i class="fas fa-bullseye"></i></div>
+        <div class="svc-header-text">
+          <h3>Paid Advertising</h3>
+          <span class="svc-tag">Google · Meta · TikTok · LinkedIn</span>
+        </div>
+      </div>
+      <p class="svc-desc">Precision-targeted campaigns engineered for maximum ROAS. We manage your entire paid media ecosystem so every dollar drives measurable return.</p>
+      <ul class="svc-features">
+        <li>Google Search & Performance Max</li>
+        <li>Meta & Instagram ad campaigns</li>
+        <li>TikTok for Business advertising</li>
+        <li>LinkedIn B2B lead generation</li>
+        <li>Retargeting & lookalike audiences</li>
+      </ul>
+    </article>
+
+    <article class="glass svc-card tilt reveal" data-delay="0">
+      <div class="svc-header">
+        <div class="svc-icon-lg"><i class="fas fa-search"></i></div>
+        <div class="svc-header-text">
+          <h3>SEO & Content Strategy</h3>
+          <span class="svc-tag">Technical · On-Page · Authority</span>
+        </div>
+      </div>
+      <p class="svc-desc">Dominate search rankings with holistic SEO — from technical optimization to magnetic content that earns backlinks and converts visitors.</p>
+      <ul class="svc-features">
+        <li>Technical SEO audit & fixes</li>
+        <li>Keyword research & strategy</li>
+        <li>Content production & publishing</li>
+        <li>Link building & PR outreach</li>
+        <li>Core Web Vitals optimization</li>
+      </ul>
+    </article>
+
+    <article class="glass svc-card tilt reveal" data-delay="80">
+      <div class="svc-header">
+        <div class="svc-icon-lg"><i class="fas fa-paint-brush"></i></div>
+        <div class="svc-header-text">
+          <h3>Brand Identity</h3>
+          <span class="svc-tag">Strategy · Design · Positioning</span>
+        </div>
+      </div>
+      <p class="svc-desc">We build brands that command premium positions in the market — from visual identity systems to brand voice, messaging frameworks, and positioning strategy.</p>
+      <ul class="svc-features">
+        <li>Brand strategy & positioning</li>
+        <li>Logo & visual identity systems</li>
+        <li>Brand voice & messaging</li>
+        <li>Brand guidelines documentation</li>
+        <li>Rebranding strategy</li>
+      </ul>
+    </article>
+
+    <article class="glass svc-card tilt reveal" data-delay="0">
+      <div class="svc-header">
+        <div class="svc-icon-lg"><i class="fas fa-share-alt"></i></div>
+        <div class="svc-header-text">
+          <h3>Social Media Marketing</h3>
+          <span class="svc-tag">Content · Community · Growth</span>
+        </div>
+      </div>
+      <p class="svc-desc">Build a loyal, engaged community that becomes your most powerful marketing channel. From content creation to community management and influencer strategy.</p>
+      <ul class="svc-features">
+        <li>Multi-platform content calendar</li>
+        <li>Short-form video production</li>
+        <li>Community management</li>
+        <li>Influencer partnerships</li>
+        <li>Social analytics & reporting</li>
+      </ul>
+    </article>
+
+    <article class="glass svc-card tilt reveal" data-delay="80">
+      <div class="svc-header">
+        <div class="svc-icon-lg"><i class="fas fa-envelope-open-text"></i></div>
+        <div class="svc-header-text">
+          <h3>Email & Automation</h3>
+          <span class="svc-tag">Flows · Sequences · Lifecycle</span>
+        </div>
+      </div>
+      <p class="svc-desc">Turn your email list into a revenue machine with strategic lifecycle campaigns, automated flows, and personalized sequences that convert at scale.</p>
+      <ul class="svc-features">
+        <li>Welcome & onboarding flows</li>
+        <li>Abandoned cart sequences</li>
+        <li>Win-back & re-engagement</li>
+        <li>Newsletter strategy</li>
+        <li>Email deliverability optimization</li>
+      </ul>
+    </article>
+
+  </div>
+</section>
+
+<!-- ── Pricing ── -->
+<section class="section pricing-teaser" aria-labelledby="pricing-heading">
+  <div class="section-label">Investment</div>
+  <h2 class="section-title reveal text-center" id="pricing-heading">Transparent <span>Pricing</span></h2>
+  <p class="section-sub reveal text-center mx-auto" data-delay="100" style="margin-left:auto;margin-right:auto;">Flexible plans built for every stage of growth. No hidden fees, no long-term lock-ins.</p>
+
+  <div class="pricing-grid mt-3">
+    <div class="glass price-card tilt reveal" data-delay="0">
+      <div class="price-name">Launch</div>
+      <div class="price-amount"><span>$</span>2,499<span>/mo</span></div>
+      <div class="price-desc">Perfect for startups ready to grow</div>
+      <ul class="price-features svc-features">
+        <li><i class="fas fa-check"></i> 2 Core Services</li>
+        <li><i class="fas fa-check"></i> Monthly Strategy Call</li>
+        <li><i class="fas fa-check"></i> Performance Dashboard</li>
+        <li><i class="fas fa-check"></i> Dedicated Account Manager</li>
+        <li><i class="fas fa-times" style="color:var(--grey)"></i> Custom Reporting</li>
+      </ul>
+      <a href="contact.html" class="btn btn-outline" style="width:100%;justify-content:center;">Get Started</a>
+    </div>
+
+    <div class="glass price-card featured tilt reveal" data-delay="120">
+      <div class="price-name">Scale</div>
+      <div class="price-amount"><span>$</span>5,999<span>/mo</span></div>
+      <div class="price-desc">For brands serious about dominating</div>
+      <ul class="price-features svc-features">
+        <li><i class="fas fa-check"></i> 4 Core Services</li>
+        <li><i class="fas fa-check"></i> Weekly Strategy Calls</li>
+        <li><i class="fas fa-check"></i> Real-time Dashboard</li>
+        <li><i class="fas fa-check"></i> Senior Strategist</li>
+        <li><i class="fas fa-check"></i> Custom Reporting</li>
+      </ul>
+      <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">Get Started</a>
+    </div>
+
+    <div class="glass price-card tilt reveal" data-delay="240">
+      <div class="price-name">Enterprise</div>
+      <div class="price-amount" style="font-size:2rem;">Custom</div>
+      <div class="price-desc">Full-service for industry leaders</div>
+      <ul class="price-features svc-features">
+        <li><i class="fas fa-check"></i> All Services Included</li>
+        <li><i class="fas fa-check"></i> Dedicated Pod Team</li>
+        <li><i class="fas fa-check"></i> C-Suite Strategy Access</li>
+        <li><i class="fas fa-check"></i> Custom Integrations</li>
+        <li><i class="fas fa-check"></i> White-Glove Support</li>
+      </ul>
+      <a href="contact.html" class="btn btn-outline" style="width:100%;justify-content:center;">Let's Talk</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Tech Stack ── -->
+<section class="section" aria-labelledby="tech-heading">
+  <div class="section-label">Tools & Platforms</div>
+  <h2 class="section-title reveal" id="tech-heading">Powered by <span>Industry-Leading</span> Tech</h2>
+  <p class="section-sub reveal" data-delay="100">We leverage the most powerful platforms in the industry to deliver results that exceed expectations.</p>
+  <div class="tech-grid reveal" data-delay="200">
+    <span class="tech-badge"><i class="fab fa-google"></i> Google Ads</span>
+    <span class="tech-badge"><i class="fab fa-meta"></i> Meta Business</span>
+    <span class="tech-badge"><i class="fab fa-tiktok"></i> TikTok Ads</span>
+    <span class="tech-badge"><i class="fab fa-linkedin"></i> LinkedIn Campaign Manager</span>
+    <span class="tech-badge"><i class="fas fa-envelope"></i> Klaviyo</span>
+    <span class="tech-badge"><i class="fas fa-chart-bar"></i> HubSpot</span>
+    <span class="tech-badge"><i class="fas fa-search"></i> Ahrefs & SEMrush</span>
+    <span class="tech-badge"><i class="fas fa-chart-pie"></i> Google Analytics 4</span>
+    <span class="tech-badge"><i class="fas fa-bolt"></i> Hotjar & VWO</span>
+    <span class="tech-badge"><i class="fas fa-code"></i> Shopify & WooCommerce</span>
+    <span class="tech-badge"><i class="fab fa-slack"></i> Slack & Notion</span>
+    <span class="tech-badge"><i class="fas fa-robot"></i> AI & Automation</span>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner section" style="text-align:center;background:var(--navy-mid);border-top:1px solid var(--glass-border);">
+  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:500px;height:250px;background:radial-gradient(ellipse,rgba(0,212,255,.1),transparent 70%);pointer-events:none;"></div>
+  <div style="position:relative;z-index:1;">
+    <h2 class="section-title reveal" style="text-align:center;">Ready to <span style="color:var(--cyan)">Scale?</span></h2>
+    <p class="reveal" data-delay="100" style="color:var(--grey);margin:.8rem auto 2rem;max-width:480px;">Let's build a strategy around your goals. Book your free discovery call today.</p>
+    <a href="contact.html" class="btn btn-primary reveal" data-delay="200"><i class="fas fa-paper-plane"></i> Book a Free Strategy Call</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer role="contentinfo">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand-name">AD<span>PLIX</span></div>
+      <p class="footer-desc">Next-generation marketing for brands that lead.</p>
+      <div class="social-icons mt-2">
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Services</div>
+      <a href="services.html">Growth Marketing</a>
+      <a href="services.html">Paid Advertising</a>
+      <a href="services.html">SEO & Content</a>
+      <a href="services.html">Brand Identity</a>
+      <a href="services.html">Social Media</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Company</div>
+      <a href="about.html">About Us</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+      <a href="#">Blog</a>
+      <a href="#">Careers</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Contact</div>
+      <a href="mailto:hello@adplix.com"><i class="fas fa-envelope"></i> hello@adplix.com</a>
+      <a href="tel:+15551234567"><i class="fas fa-phone"></i> +1 (555) 123-4567</a>
+      <a href="#"><i class="fas fa-map-marker-alt"></i> New York, NY</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Adplix Marketing. All rights reserved.</span>
+    <span><a href="#" style="color:var(--grey)">Privacy Policy</a> &nbsp;·&nbsp; <a href="#" style="color:var(--grey)">Terms of Service</a></span>
+  </div>
+</footer>
+
+<script src="main.js" defer></script>
+</body>
+</html>
