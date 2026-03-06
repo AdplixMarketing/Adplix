@@ -100,7 +100,7 @@ body.cursor-hover #cursor-inner { width: 5px; height: 5px; }
   align-items: center;
 }
 .nav-logo img {
-  height: 55px;
+  height: 120px;
   width: auto;
 }
 .nav-links { display: flex; gap: 2.2rem; }
@@ -256,7 +256,7 @@ footer {
   margin-bottom: 1rem;
 }
 .footer-brand-name img {
-  height: 50px;
+  height: 120px;
   width: auto;
 }
 .footer-desc { color: var(--grey); line-height: 1.7; font-size: 0.92rem; max-width: 280px; }
