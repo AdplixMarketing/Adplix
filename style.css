@@ -96,14 +96,13 @@ body.cursor-hover #cursor-inner { width: 5px; height: 5px; }
   background: rgba(5, 13, 31, 0.92);
 }
 .nav-logo {
-  font-family: var(--font-head);
-  font-size: 1.65rem;
-  font-weight: 900;
-  letter-spacing: 3px;
-  color: var(--white);
-  text-transform: uppercase;
+  display: flex;
+  align-items: center;
 }
-.nav-logo span { color: var(--cyan); }
+.nav-logo img {
+  height: 38px;
+  width: auto;
+}
 .nav-links { display: flex; gap: 2.2rem; }
 .nav-links a {
   font-size: 0.82rem;
@@ -254,12 +253,12 @@ footer {
   gap: 3rem; margin-bottom: 3rem;
 }
 .footer-brand-name {
-  font-family: var(--font-head);
-  font-size: 1.5rem; font-weight: 900;
-  letter-spacing: 3px; color: var(--white);
   margin-bottom: 1rem;
 }
-.footer-brand-name span { color: var(--cyan); }
+.footer-brand-name img {
+  height: 36px;
+  width: auto;
+}
 .footer-desc { color: var(--grey); line-height: 1.7; font-size: 0.92rem; max-width: 280px; }
 .footer-col-title {
   font-family: var(--font-head);

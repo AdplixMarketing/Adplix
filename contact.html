@@ -219,7 +219,7 @@
 <div id="page-transition" class="slide-in"></div>
 
 <nav class="nav" role="navigation" aria-label="Main navigation">
-  <a href="index.html" class="nav-logo">AD<span>PLIX</span></a>
+  <a href="index.html" class="nav-logo"><img src="logo.png" alt="Adplix"></a>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="services.html">Services</a></li>
@@ -311,7 +311,11 @@
       <h3 id="contact-form-heading">Book Your Free Strategy Session</h3>
       <p>Fill in the details below and we'll get back to you within 24 hours with a personalized plan.</p>
 
-      <form id="contact-form" novalidate aria-label="Contact form">
+      <form id="contact-form" action="https://formsubmit.co/kasapovicmilos@gmail.com" method="POST" novalidate aria-label="Contact form">
+        <input type="hidden" name="_subject" value="New Strategy Session Request — Adplix">
+        <input type="hidden" name="_captcha" value="true">
+        <input type="hidden" name="_next" value="https://myadplix.com/contact.html?success=true">
+        <input type="text" name="_honey" style="display:none">
         <div class="form-row">
           <div class="form-group">
             <label for="fname">First Name *</label>
@@ -461,7 +465,7 @@
 <footer role="contentinfo">
   <div class="footer-grid">
     <div>
-      <div class="footer-brand-name">AD<span>PLIX</span></div>
+      <div class="footer-brand-name"><img src="logo.png" alt="Adplix"></div>
       <p class="footer-desc">Next-generation marketing for brands that lead.</p>
       <div class="social-icons mt-2">
         <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
@@ -499,27 +503,24 @@
 
 <script src="main.js" defer></script>
 <script>
-  // Form submission
+  // Form validation before FormSubmit sends
   document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    // Validate required fields
     const required = this.querySelectorAll('[required]');
     let valid = true;
     required.forEach(el => {
       el.style.borderColor = '';
       if (!el.value.trim()) { el.style.borderColor = '#ff4466'; valid = false; }
     });
-    if (!valid) return;
-
-    // Show success
-    this.style.opacity = '0';
-    this.style.transition = 'opacity 0.4s';
-    setTimeout(() => {
-      this.style.display = 'none';
-      const success = document.getElementById('form-success');
-      success.classList.add('show');
-    }, 400);
+    if (!valid) e.preventDefault();
   });
+
+  // Show success message if redirected back after submission
+  if (new URLSearchParams(window.location.search).get('success') === 'true') {
+    const form = document.getElementById('contact-form');
+    const success = document.getElementById('form-success');
+    form.style.display = 'none';
+    success.classList.add('show');
+  }
 
   // FAQ accordion
   document.querySelectorAll('.faq-question').forEach(q => {
