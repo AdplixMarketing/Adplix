@@ -146,6 +146,17 @@
   });
 })();
 
+/* ── Stagger Reveals (must run before Scroll Reveal) ── */
+(function initStagger() {
+  document.querySelectorAll('[data-stagger]').forEach(container => {
+    const children = container.children;
+    Array.from(children).forEach((child, i) => {
+      child.classList.add('reveal');
+      child.dataset.delay = i * 120;
+    });
+  });
+})();
+
 /* ── Scroll Reveal ── */
 (function initReveal() {
   const els = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
@@ -160,17 +171,6 @@
     });
   }, { threshold: 0.12 });
   els.forEach(el => io.observe(el));
-})();
-
-/* ── Stagger Reveals ── */
-(function initStagger() {
-  document.querySelectorAll('[data-stagger]').forEach(container => {
-    const children = container.children;
-    Array.from(children).forEach((child, i) => {
-      child.classList.add('reveal');
-      child.dataset.delay = i * 120;
-    });
-  });
 })();
 
 /* ── Animated Counters ── */
